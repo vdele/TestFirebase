@@ -1,0 +1,33 @@
+<ul>
+  <li *ngFor="let book of books | async">
+      <pre>{{ book.author }} - {{ book.title }}</pre>
+  </li>
+</ul>
+<div class="">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-8 offset-md-2">
+              <h3>Add a book</h3>
+              <form name="form" (ngSubmit)="f.form.valid && addBook()" #f="ngForm" novalidate>
+                  <div class="form-group">
+                      <label for="title">Title</label>
+                      <input type="text" class="form-control" name="title" [(ngModel)]="model.title" #title="ngModel" [ngClass]="{ 'is-invalid': f.submitted && title.invalid }" required />
+                      <div *ngIf="f.submitted && title.invalid" class="invalid-feedback">
+                          <div *ngIf="title.errors.required">Title is required</div>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label for="author">Author</label>
+                      <input type="text" class="form-control" name="author" [(ngModel)]="model.author" #author="ngModel" [ngClass]="{ 'is-invalid': f.submitted && author.invalid }" required />
+                      <div *ngIf="f.submitted && author.invalid" class="invalid-feedback">
+                          <div *ngIf="author.errors.required">Author is required</div>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <button class="btn btn-primary">Register</button>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
