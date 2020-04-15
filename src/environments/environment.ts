@@ -5,12 +5,12 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyBBFfUV-yxnbNcO0N0sXoSyQ4gxnp9MvyM",
-    authDomain: "vdele-b38be.firebaseapp.com",
-    databaseURL: "https://vdele-b38be.firebaseio.com",
-    projectId: "vdele-b38be",
-    storageBucket: "vdele-b38be.appspot.com",
-    messagingSenderId: "982347761020"
+    apiKey: "your api key",
+    authDomain: "your firease domain",
+    databaseURL: "url firebase",
+    projectId: "project id",
+    storageBucket: "storage bucket",
+    messagingSenderId: "message sender id"
   }
 };
 
